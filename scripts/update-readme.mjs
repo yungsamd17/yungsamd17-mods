@@ -123,7 +123,6 @@ async function main() {
   await writeFile(README_PATH, next);
 
   console.log(`Updated README with ${all.length} repos across ${grouped.size ? GROUPS.length + 1 : GROUPS.length} sections.`);
-  if (next !== readme) process.exit(2);
 }
 
 main();
