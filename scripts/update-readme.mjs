@@ -32,7 +32,7 @@ const GROUPS = [
   },
 ];
 
-const EXCLUDE = ["yungsamd17"];
+const EXCLUDE = ["yungsamd17", "yungsamd17-mods"];
 const OTHER_LABEL = "Everything Else";
 
 async function fetchAllRepos() {

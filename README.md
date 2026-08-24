@@ -15,7 +15,7 @@ Independent Discord client mods built for the Vendetta plugin family (ShiggyCord
 
 <!-- AUTO-GENERATED:START -->
 
-_12 public repos · auto-generated on 2026-08-24_
+_11 public repos · auto-generated on 2026-08-24_
 
 ### Discord Client Mods
 
@@ -25,7 +25,6 @@ Plugins & themes for Vendetta-family clients (ShiggyCord, Kettu, Bunny, Revenge)
 |---|---|---|---|
 | [yungsamd17-plugins](https://github.com/yungsamd17/yungsamd17-plugins) | Discord client-mod plugins for ShiggyCord, Kettu, Bunny, Revenge & Vendetta — built once, works everywhere | ⭐ 0 | 2026-08-24 |
 | [yungsamd17-themes](https://github.com/yungsamd17/yungsamd17-themes) | JSON themes for Discord client mods (ShiggyCord, Kettu, Bunny, Revenge & Vendetta) — vendetta theme spec 2 | ⭐ 0 | 2026-08-24 |
-| [yungsamd17-mods](https://github.com/yungsamd17/yungsamd17-mods) | Hub for all my Discord/BetterDiscord/userscript mods — auto-generated index of every mod repo | ⭐ 0 | 2026-08-24 |
 | [vendetta-themes](https://github.com/yungsamd17/vendetta-themes) | 💬🎨 Vendetta Themes | ⭐ 0 | 2023-09-24 |
 
 ### BetterDiscord
