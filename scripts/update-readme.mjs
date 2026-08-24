@@ -71,16 +71,7 @@ function renderRepoRow(repo) {
   const desc = (repo.description || "_No description_").replace(/\|/g, "\\|");
   const stars = `⭐ ${repo.stargazers_count}`;
   const updated = new Date(repo.pushed_at).toISOString().slice(0, 10);
-  let website = "—";
-  if (repo.homepage) {
-    try {
-      const url = new URL(repo.homepage);
-      website = `[${url.host}${url.pathname === "/" ? "" : url.pathname}](${repo.homepage})`;
-    } catch {
-      website = `[link](${repo.homepage})`;
-    }
-  }
-  return `| ${name} | ${desc} | ${stars} | ${website} | ${updated} |`;
+  return `| ${name} | ${desc} | ${stars} | ${updated} |`;
 }
 
 function renderSection(label, description, repos) {
@@ -90,8 +81,8 @@ function renderSection(label, description, repos) {
     "",
     description,
     "",
-    "| Repository | Description | Stars | Website | Last push |",
-    "|---|---|---|---|---|",
+    "| Repository | Description | Stars | Last push |",
+    "|---|---|---|---|",
     ...sorted.map(renderRepoRow),
     "",
   ].join("\n");
