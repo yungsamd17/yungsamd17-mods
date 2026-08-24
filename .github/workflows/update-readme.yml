@@ -8,6 +8,7 @@ on:
     branches: [master, main]
     paths:
       - "scripts/**"
+      - "README.md"
 
 jobs:
   update:
@@ -25,6 +26,21 @@ jobs:
       - name: Fetch repos and regenerate README
         run: node scripts/update-readme.mjs
         continue-on-error: false
+
+      - name: Build site
+        run: |
+          mkdir -p dist
+          cp README.md dist/index.md
+          printf -- "---\npermalink: /404.html\n---\n" > dist/404.md
+          printf -- "> **Note:** You accessed a link that returned a 404.\n\n" >> dist/404.md
+          cat README.md >> dist/404.md
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          enable_jekyll: true
 
       - name: Commit if changed
         run: |
