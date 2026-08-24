@@ -32,8 +32,14 @@ const GROUPS = [
   },
 ];
 
-const EXCLUDE = ["yungsamd17", "yungsamd17-mods"];
+const EXCLUDE = ["yungsamd17", "yungsamd17-mods", "quick-notes", "singlenote"];
+const EXCLUDE_SUFFIXES = [".github.io"];
 const OTHER_LABEL = "Everything Else";
+
+function isExcluded(name) {
+  const lower = name.toLowerCase();
+  return EXCLUDE.includes(lower) || EXCLUDE_SUFFIXES.some((s) => lower.endsWith(s));
+}
 
 async function fetchAllRepos() {
   const repos = [];
@@ -65,7 +71,16 @@ function renderRepoRow(repo) {
   const desc = (repo.description || "_No description_").replace(/\|/g, "\\|");
   const stars = `⭐ ${repo.stargazers_count}`;
   const updated = new Date(repo.pushed_at).toISOString().slice(0, 10);
-  return `| ${name} | ${desc} | ${stars} | ${updated} |`;
+  let website = "—";
+  if (repo.homepage) {
+    try {
+      const url = new URL(repo.homepage);
+      website = `[${url.host}${url.pathname === "/" ? "" : url.pathname}](${repo.homepage})`;
+    } catch {
+      website = `[link](${repo.homepage})`;
+    }
+  }
+  return `| ${name} | ${desc} | ${stars} | ${website} | ${updated} |`;
 }
 
 function renderSection(label, description, repos) {
@@ -75,8 +90,8 @@ function renderSection(label, description, repos) {
     "",
     description,
     "",
-    "| Repository | Description | Stars | Last push |",
-    "|---|---|---|---|",
+    "| Repository | Description | Stars | Website | Last push |",
+    "|---|---|---|---|---|",
     ...sorted.map(renderRepoRow),
     "",
   ].join("\n");
@@ -91,7 +106,7 @@ async function main() {
   }
 
   const all = (await fetchAllRepos()).filter(
-    (r) => !r.fork && !r.archived && !EXCLUDE.includes(r.name.toLowerCase())
+    (r) => !r.fork && !r.archived && !isExcluded(r.name)
   );
 
   const grouped = new Map();
@@ -122,7 +137,7 @@ async function main() {
   const next = readme.slice(0, startIdx) + generated + readme.slice(endIdx + END.length);
   await writeFile(README_PATH, next);
 
-  console.log(`Updated README with ${all.length} repos across ${grouped.size ? GROUPS.length + 1 : GROUPS.length} sections.`);
+  console.log(`Updated README with ${all.length} repos across ${sections.length} sections.`);
 }
 
 main();
