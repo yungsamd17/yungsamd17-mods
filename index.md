@@ -15,7 +15,7 @@ Independent Discord client mods built for the [Vendetta](https://github.com/vend
 
 <!-- AUTO-GENERATED:START -->
 
-_8 public repos · auto-generated on 2026-09-02_
+_8 public repos · auto-generated on 2026-09-03_
 
 ### Discord Client Mods
 
@@ -23,7 +23,7 @@ Plugins & themes for Vendetta-family clients (ShiggyCord, Kettu, Bunny, Revenge)
 
 | Repository | Description | Stars | Last push |
 |---|---|---|---|
-| [yungsamd17-plugins](https://github.com/yungsamd17/yungsamd17-plugins) | Discord client-mod plugins for ShiggyCord, Kettu, Bunny, Revenge & Vendetta — built once, works everywhere | ⭐ 0 | 2026-08-24 |
+| [yungsamd17-plugins](https://github.com/yungsamd17/yungsamd17-plugins) | Discord client-mod plugins for ShiggyCord, Kettu, Bunny, Revenge & Vendetta — built once, works everywhere | ⭐ 0 | 2026-09-02 |
 | [yungsamd17-themes](https://github.com/yungsamd17/yungsamd17-themes) | JSON themes for Discord client mods (ShiggyCord, Kettu, Bunny, Revenge & Vendetta) — vendetta theme spec 2 | ⭐ 0 | 2026-08-24 |
 | [vendetta-themes](https://github.com/yungsamd17/vendetta-themes) | 💬🎨 Vendetta Themes | ⭐ 0 | 2023-09-24 |
 
@@ -49,7 +49,7 @@ Browser extensions and Twitch-related projects
 
 | Repository | Description | Stars | Last push |
 |---|---|---|---|
-| [Twitch-Live](https://github.com/yungsamd17/Twitch-Live) | 🎮🕹️👾 Sam's Twitch Live is your ultimate companion for staying connected with your favorite Twitch streams | ⭐ 5 | 2026-04-23 |
+| [Twitch-Live](https://github.com/yungsamd17/Twitch-Live) | 🎮🕹️👾 Sam's Twitch Live is your ultimate companion for staying connected with your favorite Twitch streams | ⭐ 5 | 2026-09-03 |
 | [Twitch-Addons](https://github.com/yungsamd17/Twitch-Addons) | 🧩⚙️👾 Sam's Twitch Addons, Chrome extension adding QoL features, updates and fixes. | ⭐ 1 | 2023-12-02 |
 | [Open-Twitch-Channel](https://github.com/yungsamd17/Open-Twitch-Channel) | ↗️🟣 Chrome and Firefox extension. Enter username and open channel, player and chat In the same or new tab. | ⭐ 0 | 2024-02-08 |
 
